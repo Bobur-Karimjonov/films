@@ -1,6 +1,6 @@
-var elList = document.querySelector(".js-list");
+// var elList = document.querySelector(".js-list");
 
-elList.innerHTML = '';
+// elList.innerHTML = '';
 
 var films = [
    {
@@ -409,43 +409,4 @@ var films = [
    },
 ];
 
-for (i = 0; i < films.length; i++) {
-   var newItem = document.createElement('li');
-   newItem.setAttribute('class', 'item');
-   var newId = document.createElement('span');
-   var newTitle = document.createElement('h2');
-   newTitle.setAttribute('class', 'name');
-   var newPoster = document.createElement('img');
-   var newTime = document.createElement('p');
-   var newWeaknesses = document.createElement('p');
-   var newMultipliers = document.createElement('p');
-   var newImg = document.createElement('img');
-   
-   
-   newId.textContent = `id: ${films[i].id}`;
-   newTitle.textContent = ` ${films[i].title}`;
-   newWeaknesses.textContent = `overview: ${films[i].overview}`;
-   newTime.textContent = `release_date: ${films[i].release_date}`;
-   newPoster.src = `${films[i].poster}`;
-   newMultipliers.textContent = `genres: ${films[i].genres}`;
-   newPoster.setAttribute('alt', 'Template img');
-   newPoster.setAttribute('width', '100%');
-   newPoster.setAttribute('height', '200');
 
-
-   newImg.style.display = 'block';
-   newId.style.color = 'black';
-   newId.style.display = 'block';
-   newId.style.fontSize = '32px';
-   newId.style.textAlign = 'center';
-   newWeaknesses.style.fontWeight = '900';
-   
-   
-   newItem.appendChild(newId);
-   newItem.appendChild(newTitle);
-   newItem.appendChild(newPoster);
-   newItem.appendChild(newTime);
-   newItem.appendChild(newMultipliers);
-   newItem.appendChild(newWeaknesses);
-   elList.appendChild(newItem);
-}
