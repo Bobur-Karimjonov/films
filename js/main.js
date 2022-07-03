@@ -71,3 +71,24 @@ optionsList.forEach((genres) => {
   newOption.value = genres;
   elSelect.appendChild(newOption);
 })
+
+var elSelect2 = document.querySelector('.js-select2')
+
+let result2 = []
+
+elSelect2.addEventListener("change", function(){
+	elList.innerHTML = "";
+	result2 = [];
+	result2 = films.sort((a,b) => {
+      if( a.title < b.title ,elSelect2.value === 'ztoa'){
+			return -1
+		}
+		else if(b.title > a.title ){
+			return -1
+		}
+				
+	});
+  domgaChiqarator(result2,elList)
+});
+
+
