@@ -80,7 +80,7 @@ elSelect2.addEventListener("change", function(){
 	elList.innerHTML = "";
 	result2 = [];
 	result2 = films.sort((a,b) => {
-      if( a.title < b.title ,elSelect2.value === 'ztoa'){
+      if( a.title < b.title ,elSelect2.value === 'iza'){
 			return -1
 		}
 		else if(b.title > a.title ){
